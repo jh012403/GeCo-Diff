@@ -1,0 +1,46 @@
+# 터미널에서 바로 생성하는 명령어
+cat <<EOF > .gitignore
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac OS generated files
+.DS_Store
+
+# Environments (혹시 로컬에 만들었을 경우)
+env/
+venv/
+.env
+
+# IDE settings
+.vscode/
+.idea/
+
+# ---------------------------------
+# [중요] Heavy Files & Outputs
+# ---------------------------------
+
+# 1. 결과물 폴더 제외
+outputs/
+
+# 2. 모델 가중치 파일 제외 (용량 큼)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# 3. 임시 파일 제외
+assets/*.mp4
+tmp/
+logs/
+wandb/
+
+# 4. Third-party 안의 무거운 가중치 폴더들 확실하게 제외
+third_party/**/checkpoints/
+third_party/**/weights/
+third_party/vggt/*.pt
+
+EOF
