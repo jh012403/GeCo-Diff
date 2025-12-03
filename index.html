@@ -98,22 +98,39 @@
     </p>
   </section>
 
-  <section>
-    <h2>Qualitative Results</h2>
-    <div class="grid">
-      <div>
-        <img src="assets/sr_result.jpg" alt="Enhanced Input">
-        <div class="caption">Input (Real-ESRGAN)</div>
-      </div>
-      <div>
-        <img src="assets/teaser.gif" alt="3D Output">
-        <div class="caption">Ours (3DGS)</div>
+<div class="section">
+    <h2>Experimental Results</h2>
+    
+    <div style="margin-bottom: 50px;">
+      <h3 style="text-align: center; margin-bottom: 20px;">Comparison with State-of-the-Art Methods</h3>
+      <img src="assets/Qualitative.jpg" style="width: 100%; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" alt="Comparison Results">
+      <div class="caption">
+        <strong>Figure 1.</strong> Visual comparison against baseline methods (DreamGaussian, One-2-3-45, Gamba). 
+        <br>Our method (Right) preserves geometric consistency and texture details better than existing approaches.
       </div>
     </div>
-    <p style="text-align: center; margin-top: 20px;">
-      Our method effectively handles texture details and consistent geometry even with complex object structures.
-    </p>
-  </section>
+
+    <div style="margin-bottom: 50px;">
+      <h3 style="text-align: center; margin-bottom: 20px;">Multi-view Consistency</h3>
+      <img src="assets/Qualitative2.jpg" style="width: 100%; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" alt="Multi-view Results">
+      <div class="caption">
+        <strong>Figure 2.</strong> 360&deg; novel view synthesis results. 
+        GeCo-Diff generates consistent geometry across all viewing angles.
+      </div>
+    </div>
+
+    <div>
+      <h3 style="text-align: center; margin-bottom: 20px;">Quantitative Evaluation</h3>
+      <div style="display: flex; justify-content: center;">
+        <img src="assets/Quantitative.png" style="width: 80%; border-radius: 5px; border: 1px solid #eee;" alt="Quantitative Table">
+      </div>
+      <div class="caption">
+        <strong>Table 1.</strong> Quantitative comparison on <em>Tomas</em> and <em>Whey</em> datasets.
+        <br>
+        Our method achieves higher <strong>PSNR</strong>/<strong>SSIM</strong> and lower <strong>LPIPS</strong> scores compared to baselines.
+      </div>
+    </div>
+  </div>
 
   <section>
     <h2>Citation</h2>
