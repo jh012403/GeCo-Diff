@@ -1,0 +1,134 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="GeCo-Diff: Geometric Consistent 3D Reconstruction from a Single Image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeCo-Diff</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    body { font-family: 'Google Sans', sans-serif; background-color: #ffffff; color: #333; line-height: 1.6; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    
+    /* Header */
+    header { text-align: center; margin-bottom: 40px; }
+    h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .authors { font-size: 1.2em; color: #007bff; margin-bottom: 20px; }
+    .affiliations { font-size: 0.9em; color: #666; margin-bottom: 30px; }
+    
+    /* Buttons */
+    .btn-group { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+    .btn { background: #333; color: #fff; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    .btn:hover { background: #555; }
+    .btn i { margin-right: 5px; }
+
+    /* Sections */
+    section { margin-bottom: 50px; }
+    h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; text-align: center; }
+    p { text-align: justify; }
+
+    /* Media */
+    .teaser-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .pipeline-img { width: 100%; display: block; margin: 0 auto; }
+    
+    /* Comparison Grid */
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center; }
+    .grid img { width: 100%; border-radius: 5px; }
+    .caption { font-size: 0.9em; color: #666; margin-top: 5px; }
+
+    /* Code Block */
+    pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <header>
+    <h1>GeCo-Diff</h1>
+    <p style="font-size: 1.5em; color: #555;">Geometric Consistent 3D Reconstruction from a Single Image</p>
+    
+    <div class="authors">
+      Jihwan<sup>1</sup>
+    </div>
+    <div class="affiliations">
+      <sup>1</sup>Department of AI, Your University
+    </div>
+
+    <div class="btn-group">
+      <a href="https://arxiv.org/" class="btn"><i class="fas fa-file-pdf"></i> Paper</a>
+      <a href="https://github.com/YOUR_USERNAME/GeCo-Diff" class="btn"><i class="fab fa-github"></i> Code</a>
+      <a href="#" class="btn"><i class="fas fa-database"></i> Data</a>
+    </div>
+  </header>
+
+  <section>
+    <div style="text-align: center;">
+      <img src="assets/teaser.gif" class="teaser-img" alt="Teaser Result">
+      <p style="margin-top: 15px; font-style: italic;">
+        End-to-end 3D reconstruction results from a single input image. <br>
+        Left: Input Image (Upscaled), Right: 3DGS Rendering.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Abstract</h2>
+    <p>
+      Single-image 3D reconstruction remains a challenging task due to geometric ambiguity and texture inconsistencies. 
+      Existing methods often suffer from distorted shapes or blurred details. 
+      We present <strong>GeCo-Diff</strong>, an automated end-to-end pipeline that leverages diffusion priors for both view synthesis and geometry estimation.
+      By enforcing orbital consistency and enhancing texture details via Real-ESRGAN and VGGT, our method enables robust 3D Gaussian Splatting training without manual intervention.
+    </p>
+  </section>
+
+  <section>
+    <h2>Method Overview</h2>
+    <img src="assets/pipeline.png" class="pipeline-img" alt="Pipeline">
+    <br>
+    <p>
+      Our pipeline consists of four key stages:
+      1) <strong>Video Generation</strong> using SV3D, 
+      2) <strong>Refinement</strong> with Frame filtering and Super-Resolution, 
+      3) <strong>Geometry Estimation</strong> via VGGT foundation model, and 
+      4) <strong>3D Reconstruction</strong> using Gaussian Splatting with background regularization.
+    </p>
+  </section>
+
+  <section>
+    <h2>Qualitative Results</h2>
+    <div class="grid">
+      <div>
+        <img src="assets/sr_result.jpg" alt="Enhanced Input">
+        <div class="caption">Input (Real-ESRGAN)</div>
+      </div>
+      <div>
+        <img src="assets/teaser.gif" alt="3D Output">
+        <div class="caption">Ours (3DGS)</div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px;">
+      Our method effectively handles texture details and consistent geometry even with complex object structures.
+    </p>
+  </section>
+
+  <section>
+    <h2>Citation</h2>
+    <pre>
+@misc{geco-diff2025,
+  author = {Jihwan},
+  title = {GeCo-Diff: Geometric Consistent 3D Reconstruction},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository}
+}</pre>
+  </section>
+
+</div>
+
+</body>
+</html>
