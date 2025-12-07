@@ -8,7 +8,7 @@
 
 **GeCo-Diff** is an automated end-to-end pipeline that reconstructs high-fidelity 3D Gaussian Splatting scenes from a single input image. It integrates video generation, geometric estimation, and 3D training into a unified workflow without manual intervention.
 
-For more visual results and detailed methodology, please visit our **[Project Page](https://YOUR_USERNAME.github.io/GeCo-Diff/)**.
+For more visual results and detailed methodology, please visit our **[Project Page](https://jh012403.github.io/GeCo-Diff/)**.
 
 ## 🚀 Quick Start
 
